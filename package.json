@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "test": "mocha --require test/setup.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config ./src/postgrator-config.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +17,6 @@
     "express": "^4.17.1",
     "helmet": "^3.23.3",
     "knex": "^0.21.2",
-    "migrations": "^0.1.11",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "postgrator-cli": "^3.2.0"
   }
 }
